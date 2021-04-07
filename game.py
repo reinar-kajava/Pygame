@@ -1,13 +1,21 @@
-import sys
 import pygame
 
+from Settings import Settings
+from ship import Ship
+import functions as gf
 
 def run_game():
+    # init game and create display object
     pygame.init()
-    screen = pygame.display.set_mode((800, 600))
-    pygame.display.set_caption("Example game")
+    game_settings = Settings()
+    screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
+    pygame.display.set_caption("Example Game")
 
-    while True():
-        for event in pygame.event.get():
-            if event.type == pygame.quit()
-                sys.exit()
+    # create ship
+    ship = Ship(screen)
+
+    while True:
+        gf.check_events()
+        gf.update_screen(game_settings, screen, ship)
+# test game
+run_game()
