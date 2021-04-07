@@ -12,10 +12,11 @@ def run_game():
     pygame.display.set_caption("Example Game")
 
     # create ship
-    ship = Ship(screen)
+    ship = Ship(game_settings, screen)
 
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(game_settings, screen, ship)
 # test game
 run_game()
