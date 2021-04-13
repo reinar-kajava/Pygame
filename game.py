@@ -3,6 +3,7 @@ from pygame.sprite import Group
 
 from Settings import Settings
 from ship import Ship
+from Aliens import Alien
 import functions as gf
 
 def run_game():
