@@ -8,7 +8,7 @@ class Alien(Sprite):
         super().__init__()
         self.screen = screen
         self.game_settings = game_setting
-        self.image = pygame.image.load(Images/vaenlane.bmp)
+        self.image = pygame.image.load("Images/vaenlane.bmp")
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
