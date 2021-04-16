@@ -58,52 +58,16 @@ def fire_bullet(game_settings, screen, ship, bullets):
         new_bullet = Bullet(game_settings, screen, ship)
         bullets.add(new_bullet)
 
-def get_number_aliens_x(game_settings, alien_width):
-    """Compute number of aliens in the row"""
-    available_space_x = game_settings.screen_width - 2 * alien_width
-    number_aliens_x = int(available_space_x / (2 * alien_width))
-    return number_aliens_x
-
-def get_number_rows(game_settings, ship_height, alien_height):
-    """Define nuber of rows on screen"""
-    available_space_y = game_settings.screen_height - 3 * alien_height - ship_height
-    number_rows = int(available_space_y / (2 * alien_height))
-    return number_rows
-
-def create_alien(game_settings, screen, aliens, alien_number, row_number):
-    # create alien and put it into row
+def create_fleet(game_settings, screen, aliens):
+    """Create alien fleet"""
     alien = Alien(game_settings, screen)
     alien_width = alien.rect.width
-    alien.x = alien_width + 2 * alien_width * alien_number
-    alien.rect.x = alien.x
-    alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
-    aliens.add(alien)
-
-def create_fleet(game_settings, screen, ship, aliens):
-    """Create alines fleet"""
-    # Create aliend and compute how much aliens can exists at the row
-    alien = Alien(game_settings, screen)
-    avaliable_space_x = screen_width - (2 * alien_width)
-    number_aliens_x = int(available_space_x / (2 * alien_width))
-    # create first row
-    for row_number in range(number_rows):
-        for alien_number in range(number_aliens_x):
-            create_alien(game_settings, screen, aliens, alien_number, row_number)
-
-def check_fleet_edges(game_settings, aliens):
-    for alien in aliens.sprites():
-        if alien.check_edges():
-            change_fleet_direction(game_settings, aliens)
-            break
-
-def change_fleet_direction(game_settings, aliens):
-    for alien in aliens.sprites():
-        alien.rect.y += game_settings.fleet_drop_speed
-    game_settings.fleet_direction *= -1
-
-def update_aliens(game_settings, aliens):
-    """Update aliens position"""
-    check_fleet_edges(game_settings, aliens)
-    aliens.update()
-
-
+    avaliable_screen_width = game_settings.screen_width - (2 * alien_width)
+    number_aliens_x = int(avaliable_screen_width / (2 * alien_width))
+    #create first fleet
+    for alien_number in range(number_aliens_x):
+        alien = Alien(game_settings, screen)
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        aliens.add(alien)
+        #create alien
