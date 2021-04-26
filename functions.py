@@ -57,6 +57,7 @@ def fire_bullet(game_settings, screen, ship, bullets):
     if len(bullets) < game_settings.bullets_allowed:
         new_bullet = Bullet(game_settings, screen, ship)
         bullets.add(new_bullet)
+#def get_number_aliens_x(game_settings, alien_width)
 
 def create_fleet(game_settings, screen, aliens):
     """Create alien fleet"""
