@@ -14,6 +14,9 @@ def run_game():
     game_settings = Settings()
     screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
     pygame.display.set_caption("Example Game")
+    #make button
+    playbutton = Button(game_settings, screen, "play" )
+
     #Game statistics
     stats = Stats(game_settings)
 
@@ -25,12 +28,12 @@ def run_game():
     gf.create_fleet(game_settings, screen, ship, aliens)
 
     while True:
-        gf.check_events(game_settings, screen, ship, bullets)
+        gf.check_events(game_settings, screen, ship, bullets, stats, playbutton)
         if stats.game_active == True:
             ship.update()
             gf.update_bullets(game_settings, screen, ship, aliens,bullets)
             gf.update_aliens(game_settings, stats, screen, ship, aliens, bullets)
-            gf.update_screen(game_settings, screen, ship, aliens, bullets)
+            gf.update_screen(game_settings, screen, ship, aliens, bullets, playbutton, stats)
 
 # test game
 run_game()
