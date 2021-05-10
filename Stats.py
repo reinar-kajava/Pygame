@@ -2,7 +2,7 @@ class Stats():
     # This file is responsible for stats
     def __init__(self, game_settings):
         self.game_settings = game_settings
-        self.game_active = True
+        self.game_active = False
 
         self.resetstats()
 

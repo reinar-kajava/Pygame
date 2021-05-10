@@ -6,6 +6,7 @@ from ship import Ship
 from alien import Alien
 from Stats import Stats
 import functions as gf
+from button import Button
 
 def run_game():
     # init game and create display object
