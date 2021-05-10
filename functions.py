@@ -36,9 +36,9 @@ def check_events(game_settings, screen, ship, bullets, stats, playbutton):
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
             checkplaybutton(stats, playbutton, mouse_x, mouse_y)
-def checkplaybutton(stats, playbutton, mouse_x, mouse_y):
+def checkplaybutton(Stats, playbutton, mouse_x, mouse_y):
     if playbutton.rect.collidepoint(mouse_x, mouse_y):
-        stats.game_active == True
+        Stats.game_active = True
 
 """Screen"""
 def update_screen(game_settings, screen, ship, aliens, bullets, playbutton, stats):
@@ -52,9 +52,10 @@ def update_screen(game_settings, screen, ship, aliens, bullets, playbutton, stat
     ship.blitme()
     # add alien to screen
     aliens.draw(screen)
-    # display the last screen
+    # if game is not running then play button will be drawn
     if stats.game_active == False:
         playbutton.drawbutton()
+    # display the last screen
     pygame.display.flip()
 
 
