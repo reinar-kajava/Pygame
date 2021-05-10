@@ -37,7 +37,7 @@ def check_events(game_settings, screen, ship, bullets, stats, playbutton):
             mouse_x, mouse_y = pygame.mouse.get_pos()
             checkplaybutton(game_settings, stats, playbutton, mouse_x, mouse_y)
 def checkplaybutton(game_settings, Stats, playbutton, mouse_x, mouse_y,):
-    if playbutton.rect.collidepoint(mouse_x, mouse_y):
+    if playbutton.rect.collidepoint(mouse_x, mouse_y,):
         game_settings.init_dynamics
         Stats.game_active = True
 
