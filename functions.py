@@ -42,7 +42,7 @@ def checkplaybutton(game_settings, Stats, playbutton, mouse_x, mouse_y,):
         Stats.game_active = True
 
 """Screen"""
-def update_screen(game_settings, screen, ship, aliens, bullets, playbutton, stats):
+def update_screen(game_settings, screen, stats, sb, ship, aliens, bullets, playbutton):
 
     """Update image on screen and draw new screen"""
     # add screen background
@@ -53,6 +53,8 @@ def update_screen(game_settings, screen, ship, aliens, bullets, playbutton, stat
     ship.blitme()
     # add alien to screen
     aliens.draw(screen)
+
+    sb.draw_score()
     # if game is not running then play button will be drawn
     if stats.game_active == False:
         playbutton.drawbutton()

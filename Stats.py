@@ -1,3 +1,4 @@
+
 class Stats():
     # This file is responsible for stats
     def __init__(self, game_settings):
