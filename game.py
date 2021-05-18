@@ -25,26 +25,26 @@ def run_game():
     screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
     pygame.display.set_caption("Example Game")
 
-    # makes a play button
+    # makes the play button you see when you boot up the game
 
     playbutton = Button(game_settings, screen, "play" )
 
 
-    # Game statistics
+    # Allows the game to use the statistics
 
     stats = Stats(game_settings)
 
-    # Scoreboard
+    # Allows the game to use the scoreboard
 
     sb = Score(game_settings, screen, stats)
 
 
-    # create ship
+    # creates the ship that the player uses
 
     ship = Ship(game_settings, screen)
     bullets = Group()
 
-    # create alien group
+    # creates fleets of aliens
 
     aliens = Group()
     gf.create_fleet(game_settings, screen, ship, aliens)

@@ -1,5 +1,5 @@
 class Settings:
-    """A class to store all setting for example game"""
+    """A class to store all of the settings for example game eg screen size and controls"""
 
     def __init__(self):
         """Initialize the game settings"""

@@ -9,12 +9,12 @@ class Score():
         self.text_color = (0, 0, 0)
         self.font = pygame.font.SysFont(None, 46)
 
-        """Prepeare graphical score"""
+        """Prepares graphical score"""
         self.prepare_score()
 
     def prepare_score(self):
         score_str = str(self.stats.score)
-        """Convert msg"""
+        """Convert the score into a visible image in game and sets its position"""
         self.score_image = self.font.render(score_str, True, self.text_color, self.game_settings.bg_color)
         self.score_image_rect = self.score_image.get_rect()
         self.score_image_rect.right = self.screen_rect.right - 20

@@ -14,4 +14,4 @@ class Stats():
         self.ships_left = self.game_settings.ship_limit
         self.score = 0
 
-#This file is responsible for stats
+

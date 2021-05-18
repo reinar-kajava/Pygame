@@ -4,7 +4,7 @@ class Button():
         self.screen = screen
         self.screen_rect = screen.get_rect()
 
-        # Button class size atributes font etc
+        # Button class size atributes
         self.width = 200
         self.height = 50
         self.button_color = (255, 255, 255)
