@@ -1,3 +1,7 @@
+
+#Games author: Reinar Kajava
+# Games main file that is needed to run the game.
+
 import pygame
 from pygame.sprite import Group
 
@@ -10,24 +14,37 @@ from button import Button
 from Score import Score
 
 def run_game():
+
+
     # init game and create display object
+
+
     pygame.init()
     game_settings = Settings()
     screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
     pygame.display.set_caption("Example Game")
-    #make button
+
+    # makes a play button
+
     playbutton = Button(game_settings, screen, "play" )
 
-    #Game statistics
+
+    # Game statistics
+
     stats = Stats(game_settings)
 
+    # Scoreboard
 
     sb = Score(game_settings, screen, stats)
 
+
     # create ship
+
     ship = Ship(game_settings, screen)
     bullets = Group()
+
     # create alien group
+
     aliens = Group()
     gf.create_fleet(game_settings, screen, ship, aliens)
 
@@ -39,5 +56,11 @@ def run_game():
             gf.update_aliens(game_settings, stats, screen, ship, aliens, bullets)
         gf.update_screen(game_settings, screen, stats, sb, ship, aliens, bullets, playbutton)
 
+
 # test game
+
 run_game()
+
+
+
+#Games author: Reinar Kajava

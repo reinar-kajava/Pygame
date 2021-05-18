@@ -5,8 +5,10 @@ from alien import Alien
 from time import sleep
 from Stats import Stats
 """Keybinds"""
+
 def check_keydown_events(event, game_settings, screen, ship, bullets):
     """Check key down events"""
+
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     if event.key == pygame.K_LEFT:
@@ -19,6 +21,7 @@ def check_keydown_events(event, game_settings, screen, ship, bullets):
 
 def check_keyup_events(event, ship):
     """Check key up events"""
+
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
     if event.key == pygame.K_LEFT:
@@ -26,6 +29,7 @@ def check_keyup_events(event, ship):
 
 def check_events(game_settings, screen, ship, bullets, stats, playbutton):
     """Check keyboard and mouse events"""
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -42,9 +46,11 @@ def checkplaybutton(game_settings, Stats, playbutton, mouse_x, mouse_y,):
         Stats.game_active = True
 
 """Screen"""
+
 def update_screen(game_settings, screen, stats, sb, ship, aliens, bullets, playbutton):
 
     """Update image on screen and draw new screen"""
+
     # add screen background
     screen.fill(game_settings.bg_color)
     for bullet in bullets.sprites():
@@ -66,6 +72,7 @@ def update_screen(game_settings, screen, stats, sb, ship, aliens, bullets, playb
 """Bullets"""
 def update_bullets(game_settings, screen, stats, sb, ship, aliens, bullets):
     """Update bullets position and  remove old bullets"""
+
     bullets.update()
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
@@ -94,6 +101,7 @@ def fire_bullet(game_settings, screen, ship, bullets):
 """Aliens"""
 def get_number_aliens_x(game_settings, alien_width):
     """Compute number of aliens in the row"""
+
     available_space_x = game_settings.screen_width - 2 * alien_width
     number_aliens_x = int(available_space_x / (2 * alien_width))
     return number_aliens_x
@@ -115,6 +123,7 @@ def create_alien(game_settings, screen, aliens, alien_number, row_number):
 
 def create_fleet(game_settings, screen, ship, aliens):
     """Create alines fleet"""
+
     # Create aliend and compute how much aliens can exists at the row
     alien = Alien(game_settings, screen)
     number_aliens_x = get_number_aliens_x(game_settings, alien.rect.width)

@@ -4,13 +4,13 @@ class Button():
         self.screen = screen
         self.screen_rect = screen.get_rect()
 
-        #Button class size atributes font etc
+        # Button class size atributes font etc
         self.width = 200
         self.height = 50
         self.button_color = (255, 255, 255)
         self.text_color = (0, 0, 0)
         self.font = pygame.font.SysFont(None, 46)
-        #Build the button
+        # Build the button
         self.rect = pygame.Rect(0, 0, self.width, self.height)
         self.rect.center = self.screen_rect.center
         """Prepeare graphical text"""

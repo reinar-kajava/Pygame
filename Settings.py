@@ -6,9 +6,8 @@ class Settings:
         # screen settings
         self.screen_width = 800
         self.screen_height = 600
-        self.bg_color = (150,150,128)
+        self.bg_color = (150, 150, 128)
         # ship settings
-
 
         self.ship_limit = 3
         # bullet settings
@@ -19,12 +18,12 @@ class Settings:
         self.bullets_allowed = 6
         # aliens settings
 
-
         self.fleet_drop_speed = 5
         self.init_dynamics()
 
-        #speed up factor
+        # speed up factor
         self.speedup_scale = 1.1
+
     def init_dynamics(self):
         self.ship_speed_factor = 0.5
         self.bullet_speed_factor = 0.5
@@ -34,7 +33,6 @@ class Settings:
         self.fleet_direction = 1
 
         self.alien_points = 50
-
 
     def increase_speed(self):
         self.ship_speed_factor *= self.speedup_scale
