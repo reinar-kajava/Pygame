@@ -2,6 +2,7 @@
 #Games author: Reinar Kajava
 # Games main file that is needed to run the game.
 
+#Nessecary imports which allow this file to use other files and classes inside of them
 import pygame
 from pygame.sprite import Group
 
@@ -60,7 +61,3 @@ def run_game():
 # test game
 
 run_game()
-
-
-
-#Games author: Reinar Kajava
