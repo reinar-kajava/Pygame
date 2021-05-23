@@ -1,12 +1,12 @@
+###Game made by: Reinar Kajava
 # Pygame Project
 
-A very basic game using the pygame plugin.
-
+My very first and very basic game in Python
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your machine for development and testing purposes.
 Check LISENCE.md for more information on how you can use this program.
 ### Prerequisites
 
@@ -15,9 +15,10 @@ https://www.pygame.org/news Link for the pygame module
 
 
 
+
 ### Installing
 
-A step by step series of examples that tell you how to get the program running
+A step by step series of examples that tell you how to get the game running
 
 Steps are as follows:
 
@@ -32,8 +33,12 @@ Download the files in the repository as .zip and extract them into the python pr
 
 ```
 Step Three
-Run the game via Pycharm or another IDE of your choosing
+Run the game.py file in the project
 ```
+# Controls
+Spacebar - Shoot
+
+Left and right arrow - Move left and right
 
 # Built With
 

@@ -1,5 +1,4 @@
 
-#Games author: Reinar Kajava
 # Games main file that is needed to run the game.
 
 #Nessecary imports which allow this file to use other files and classes inside of them
