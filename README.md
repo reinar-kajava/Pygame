@@ -40,6 +40,7 @@ Spacebar - Shoot
 
 Left and right arrow - Move left and right
 
+Q - Quit the game
 # Built With
 
 * [Pycharm Community edition](https://www.jetbrains.com/pycharm/download/) - Python IDE which was used to program this on
