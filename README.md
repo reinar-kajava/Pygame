@@ -1,4 +1,4 @@
-###Game made by: Reinar Kajava
+### Game made by: Reinar Kajava
 # Pygame Project
 
 My very first and very basic game in Python
