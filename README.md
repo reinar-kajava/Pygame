@@ -1,8 +1,8 @@
 ### Game made by: Reinar Kajava
 # Pygame Project
 
-My very first and very basic game in Python
-
+My very first and very basic game in Python.
+Aliens get progressivley faster and harder to hit with each fleet you take out.The ship you use has three lives
 
 ## Getting Started
 
